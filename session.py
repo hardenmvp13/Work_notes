@@ -1,14 +1,17 @@
 '''
 python
 
-
 # 登陆验证
 def auth(func):
-    # '''判断是否登录装饰器'''
+    '''
+     判断是否登录装饰器
+     '''
 
     def inner(request, *args, **kwargs):
         ck = request.session.get("username")
-        # '''如果没有登陆返回到login.html'''
+        '''
+        如果没有登陆返回到login.html
+        '''
         if not ck:
             return redirect("/login.html")
         return func(request, *args, **kwargs)
