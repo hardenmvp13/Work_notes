@@ -1,0 +1,51 @@
+'''
+删除服务
+
+```python
+sc delete [server name]
+如：sc delete MySQL
+```
+
+
+
+mysql
+
+```python
+net start mysql;    ---启动mysql
+
+mysql -u root -p;   ----进入mysql
+
+show processlist;    -----查看链接数据库信息
+```
+
+
+
+```
+# 查看端口占用
+netstat -a -o    /netstat -ano
+
+# 查看哪个进程或者程序占用
+tasklist | findstr "2720"		---pid
+
+# 查看进程的内存占用，pid
+tasklist | findstr python(进程名称)
+
+# 杀死进程
+taskkill -pid 38060
+
+# 强制杀死进程
+taskkill -f -pid 15236
+```
+
+```
+PING端口，需要在：控制面板 -- 程序 -- 开启Telnet 客户端
+telnet 3306
+
+# 查看ip 地址连接和端口
+netstat -an
+# 查看网关
+netstat -r
+```
+
+
+'''
